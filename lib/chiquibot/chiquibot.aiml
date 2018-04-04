@@ -102,4 +102,120 @@
       </template>
    </category>
 
+   <category>
+      <pattern>WHAT IS H2O</pattern>
+      <template>Water.</template>
+   </category>
+
+   <category>
+      <pattern>WHAT SOUND DOES $A DEAD ^</pattern>
+      <template>No sound.</template>
+   </category>
+
+   <category>
+      <pattern>WHEN # PLANT ^</pattern>
+      <template>Plant in the spring. Harvest in the fall.</template>
+   </category>
+
+   <category>
+      <pattern>
+         WHAT IS THE
+         <set>ordinal</set>
+         MONTH ^
+      </pattern>
+      <template>
+         <srai>
+            NTHWORD
+            <map name="ordinal2number">
+               <star />
+            </map>
+            January February March April May June July August September October November December
+         </srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>WHAT IS THE LAST MONTH ^</pattern>
+      <template>
+         <srai>NTHWORD 12 January February March April May June July August September October November December</srai>
+      </template>
+   </category>
+
+   <category>
+      <pattern>WHAT IS LAST # BIBLE #</pattern>
+      <template>Revelations</template>
+   </category>
+
+   <category>
+      <pattern>
+         WHAT COUNTRY IS *
+         <set>article</set>
+         CAPITAL *
+      </pattern>
+      <template>
+         <map>
+            <name>capital2nation</name>
+            <star />
+         </map>
+      </template>
+   </category>
+
+   <category>
+      <pattern>
+         WHAT NATION IS *
+         <set>article</set>
+         CAPITAL *
+      </pattern>
+      <template>
+         <map>
+            <name>capital2nation</name>
+            <star />
+         </map>
+      </template>
+   </category>
+
+   <category>
+      <pattern>WHAT COUNTRY IS * CAPITAL *</pattern>
+      <template>
+         <map>
+            <name>capital2nation</name>
+            <star />
+         </map>
+      </template>
+   </category>
+
+   <category>
+      <pattern>WHAT NATION IS * CAPITAL *</pattern>
+      <template>
+         <map>
+            <name>capital2nation</name>
+            <star />
+         </map>
+      </template>
+   </category>
+
+   <category>
+      <pattern>
+         WHAT STATE IS *
+         <set>article</set>
+         CAPITAL *
+      </pattern>
+      <template>
+         <map>
+            <name>capital2state</name>
+            <star />
+         </map>
+      </template>
+   </category>
+
+   <category>
+      <pattern>WHAT STATE IS * CAPITAL *</pattern>
+      <template>
+         <map>
+            <name>capital2state</name>
+            <star />
+         </map>
+      </template>
+   </category>
+
 </aiml>
