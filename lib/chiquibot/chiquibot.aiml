@@ -17,6 +17,21 @@
     </category>
 
     <category>
+      <pattern>WHAT DO YOU LIKE ABOUT THE WAY I *</pattern>
+      <template>You have a great personality.</template>
+    </category>
+
+    <category>
+      <pattern>CHIQUITO *</pattern>
+      <template>
+        <random>
+          <li>¿Qué quieres, pecador de la pradera?</li>
+          <li>¡Jaaaaaaaaarl!, ¡Qué dise tu!</li>
+        </random>
+      </template>
+    </category>
+
+    <category>
       <pattern>CHIQUITO *</pattern>
       <template>
         <random>
