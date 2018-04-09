@@ -17,19 +17,20 @@
 //= require_tree .
 
 $(document).ready(function(){
+  doWidget: function ()
+  {  $.ajax({
+        url: '/ask_chiquito',
+        type: 'json',
+        method: 'get',
+        data: { query: $('#query').val() },
+        success: function(data) {
+          $('.chiquibot-response').removeClass('hide');
+          $('#chiquito-response').html(data['response']);
+          $('#query').val('');
+        }
+      });
 
+  }
   $('#al-ataquerl').on('click', function(event) {
-    $.ajax({
-      url: '/ask_chiquito',
-      type: 'json',
-      method: 'get',
-      data: { query: $('#query').val() },
-      success: function(data) {
-        $('.chiquibot-response').removeClass('hide');
-        $('#chiquito-response').html(data['response']);
-        $('#query').val('');
-      }
-    });
-  });
-
+    this.doWidget
 });
